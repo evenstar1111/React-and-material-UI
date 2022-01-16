@@ -1,0 +1,40 @@
+@mixin typographyFontModifier($fw: normal, $fz: initial, $lh: initial) {
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+}
+
+.pretty-card {
+    padding: 38px 47px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+
+    .cirlcle-2 {
+        background: linear-gradient(180deg, rgba(16, 107, 157, 0.28) 0%, rgba(235, 249, 82, 0) 100%);
+    }
+
+    .MuiTypography-root {
+        &.title {
+            @include typographyFontModifier(200, 40px, 46.88px);
+        }
+        &.sub-title {
+            @include typographyFontModifier(700, 24px, 28.13px);
+        }
+        &.information {
+            @include typographyFontModifier(400, 20px, 23.44px);
+        }
+    }
+
+    .title-margin {
+        margin-bottom: 5px;
+    }
+
+    .sub-title-margin {
+        margin-bottom: 15px;
+    }
+
+    @media (min-width: 768px) {
+        & {
+            max-width: 720px;
+        }
+    }
+}

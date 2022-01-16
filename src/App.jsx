@@ -1,11 +1,19 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
+import FancyCard from "./components/FancyCard";
+import FancyButton from "./components/Buttons/FancyButton";
 
 export class App extends Component {
-    
+    componentDidMount() {}
+
     render() {
         return (
-            <h1>New react app with material UI.</h1>
-        )
+            <div className="mt-4">
+                <FancyCard>
+                    <FancyButton />
+                </FancyCard>
+            </div>
+        );
     }
+}
 
-} 
+export default App;
